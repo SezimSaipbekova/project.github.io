@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .question input[type="text"],
+        .question select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .question textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <div class="container">
+        <h2>Опросник</h2>
+        <form id="surveyForm">
+
+            <div class="question">
+                <p>Какой ваш пол?</p>
+                <label><input type="radio" name="q1" value="Мужской"> Мужской</label>
+                <label><input type="radio" name="q1" value="Женский"> Женский</label>
+                <label><input type="radio" name="q1" value="Другой"> Другой</label>
+            </div>
+            <!-- Вопрос 2 -->
+            <div class="question">
+                <p>Каков ваш возраст?</p>
+                <input type="number" name="q2" min="1" max="120">
+            </div>
+            <!-- Вопрос 3 -->
+            <div class="question">
+                <p>Сколько лет вы уже работаете?</p>
+                <input type="number" name="q3" min="0">
+            </div>
+            <!-- Вопрос 4 -->
+            <div class="question">
+                <p>В какой области вы работаете?</p>
+                <input type="text" name="q4">
+            </div>
+            <!-- Вопрос 5 -->
+            <div class="question">
+                <p>Какой ваш семейный статус?</p>
+                <label><input type="radio" name="q5" value="Женат(а)/Замужем"> Женат(а)/Замужем</label>
+                <label><input type="radio" name="q5" value="Холост(а)/Не замужем"> Холост(а)/Не замужем</label>
+                <label><input type="radio" name="q5" value="Разведен(а)"> Разведен(а)</label>
+                <label><input type="radio" name="q5" value="Вдовец/Вдова"> Вдовец/Вдова</label>
+                <label><input type="radio" name="q5" value="Другое"> Другое</label>
+            </div>
+            <!-- Вопрос 6 -->
+            <div class="question">
+                <p>Имеете ли вы свое жилье?</p>
+                <label><input type="radio" name="q6" value="Да"> Да</label>
+                <label><input type="radio" name="q6" value="Нет"> Нет</label>
+            </div>
+            <!-- Вопрос 7 -->
+            <div class="question">
+                <p> Какие методы борьбы с выгоранием вы используете? (Выберите все применимые варианты)</p>
+                <label><input type="checkbox" name="q7" value="Управление стрессом и релаксация"> Управление стрессом и релаксация</label>
+                <label><input type="checkbox" name="q7" value="Установка границ и управление временем"> Установка границ и управление временем</label>
+                <label><input type="checkbox" name="q7" value="Физическая активность и здоровый образ жизни"> Физическая активность и здоровый образ жизни</label>
+                <label><input type="checkbox" name="q7" value="Поддержка от коллег и семьи"> Поддержка от коллег и семьи</label>
+                <label><input type="checkbox" name="q7" value="Профессиональная консультация или терапия"> Профессиональная консультация или терапия</label>
+                <label><input type="checkbox" name="q7" value="Другое"> Другое</label>
+            </div>
+
+            <!-- Вопросы с вариантами ответов -->
+            <!-- Вопрос 1 -->
+            <div class="question">
+                <label>1. Я чувствую себя эмоционально опустошенным.</label><br>
+                <label><input type="radio" name="q1" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q1" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q1" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q1" value="4"> Часто</label><br>
+                <label><input type="radio" name="q1" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q1" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>2. После работы я чувствую себя как «выжатый лимон».</label><br>
+                <label><input type="radio" name="q2" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q2" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q2" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q2" value="4"> Часто</label><br>
+                <label><input type="radio" name="q2" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q2" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>3. Утром я чувствую усталость и нежелание идти на работу.
+                </label><br>
+                <label><input type="radio" name="q3" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q3" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q3" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q3" value="4"> Часто</label><br>
+                <label><input type="radio" name="q3" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q3" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>4. Я хорошо понимаю, что чувствуют мои подчиненные и коллеги, и стараюсь
+                    учитывать это в интересах дела.</label><br>
+                <label><input type="radio" name="q4" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q4" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q4" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q4" value="4"> Часто</label><br>
+                <label><input type="radio" name="q4" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q4" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>5. Я чувствую, что общаюсь с некоторыми подчиненными и коллегами как с
+                    предметами (без теплоты и расположения к ним)</label><br>
+                <label><input type="radio" name="q5" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q5" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q5" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q5" value="4"> Часто</label><br>
+                <label><input type="radio" name="q5" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q5" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>6. После работы на некоторое время хочется уединиться от всех и всего.</label><br>
+                <label><input type="radio" name="q6" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q6" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q6" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q6" value="4"> Часто</label><br>
+                <label><input type="radio" name="q6" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q6" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>7. Я умею находить правильное решение в конфликтных ситуациях, возникающих
+                    при общении с коллегами.</label><br>
+                <label><input type="radio" name="q7" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q7" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q7" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q7" value="4"> Часто</label><br>
+                <label><input type="radio" name="q7" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q7" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>8. Я чувствую угнетенность и апатию</label><br>
+                <label><input type="radio" name="q8" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q8" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q8" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q8" value="4"> Часто</label><br>
+                <label><input type="radio" name="q8" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q8" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>9. Я уверен, что моя работа нужна людям.</label><br>
+                <label><input type="radio" name="q9" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q9" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q9" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q9" value="4"> Часто</label><br>
+                <label><input type="radio" name="q9" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q9" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>10. В последнее время я стал более «черствым» по отношению к тем, с кем
+                    работаю.</label><br>
+                <label><input type="radio" name="q10" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q10" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q10" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q10" value="4"> Часто</label><br>
+                <label><input type="radio" name="q10" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q10" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>11. Я замечаю, что моя работа ожесточает меня</label><br>
+                <label><input type="radio" name="q11" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q11" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q11" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q11" value="4"> Часто</label><br>
+                <label><input type="radio" name="q11" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q11" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>12. У меня много планов на будущее, и я верю в их осуществление.</label><br>
+                <label><input type="radio" name="q12" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q12" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q12" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q12" value="4"> Часто</label><br>
+                <label><input type="radio" name="q12" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q12" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>13. Моя работа все больше меня разочаровывает.</label><br>
+                <label><input type="radio" name="q13" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q13" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q13" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q13" value="4"> Часто</label><br>
+                <label><input type="radio" name="q13" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q13" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>14. Мне кажется, что я слишком много работаю.
+                </label><br>
+                <label><input type="radio" name="q14" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q14" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q14" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q14" value="4"> Часто</label><br>
+                <label><input type="radio" name="q14" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q14" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>15. Бывает, что мне действительно безразлично то, что происходит c некоторыми
+                    моими подчиненными и коллегами.
+                    </label><br>
+                <label><input type="radio" name="q15" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q15" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q15" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q15" value="4"> Часто</label><br>
+                <label><input type="radio" name="q15" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q15" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>16. Мне хочется уединиться и отдохнуть от всего и всех.</label><br>
+                <label><input type="radio" name="q16" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q16" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q16" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q16" value="4"> Часто</label><br>
+                <label><input type="radio" name="q16" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q16" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>17. Я легко могу создать атмосферу доброжелательности и сотрудничества в
+                    коллективе.</label><br>
+                <label><input type="radio" name="q17" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q17" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q17" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q17" value="4"> Часто</label><br>
+                <label><input type="radio" name="q17" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q17" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>18. Во время работы я чувствую приятное оживление.</label><br>
+                <label><input type="radio" name="q18" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q18" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q18" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q18" value="4"> Часто</label><br>
+                <label><input type="radio" name="q18" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q18" value="6"> Каждый день</label><br>
+            </div>
+
+            <div class="question">
+                <label>19. Благодаря своей работе я уже сделал в жизни много действительно ценного.</label><br>
+                <label><input type="radio" name="q19" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q19" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q19" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q19" value="4"> Часто</label><br>
+                <label><input type="radio" name="q19" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q19" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>20. Я чувствую равнодушие и потерю интереса ко многому, что радовало меня в
+                    моей работе.</label><br>
+                <label><input type="radio" name="q20" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q20" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q20" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q20" value="4"> Часто</label><br>
+                <label><input type="radio" name="q20" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q20" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>21. На работе я спокойно справляюсь с эмоциональными проблемами.</label><br>
+                <label><input type="radio" name="q21" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q21" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q21" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q21" value="4"> Часто</label><br>
+                <label><input type="radio" name="q21" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q21" value="6"> Каждый день</label><br>
+            </div>
+            <div class="question">
+                <label>22. В последнее время мне кажется, что коллеги и подчиненные все чаще
+                    перекладывают на меня груз своих проблем и обязанностей.</label><br>
+                <label><input type="radio" name="q22" value="0"> Никогда</label><br>
+                <label><input type="radio" name="q22" value="1"> Очень редко</label><br>
+                <label><input type="radio" name="q22" value="3"> Иногда</label><br>
+                <label><input type="radio" name="q22" value="4"> Часто</label><br>
+                <label><input type="radio" name="q22" value="5"> Очень часто</label><br>
+                <label><input type="radio" name="q22" value="6"> Каждый день</label><br>
+            </div>
+            
+            <button type="submit">Отправить</button>
+        </form>
+        <!-- Здесь будет выводиться результат -->
+        <div id="result"></div>
+    </div>
+
+    <script>
+
+
+        // JavaScript-код для обработки отправки формы и вывода результатов
+        document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвратить отправку формы по умолчанию
+
+            // Сумма баллов для каждой категории
+            let emotionalExhaustion = 0;
+            let depersonalization = 0;
+            let personalAchievement = 0;
+
+            // Получаем ответы на все вопросы и считаем суммы баллов для каждой категории
+            document.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+                const value = parseInt(input.value);
+                if ([1, 2, 3, 6, 8, 13, 14, 16, 20].includes(parseInt(input.name.substring(1)))) {
+                    emotionalExhaustion += value;
+                } else if ([5, 10, 11, 15, 22].includes(parseInt(input.name.substring(1)))) {
+                    depersonalization += value;
+                } else if ([4, 7, 9, 12, 17, 18, 19, 21].includes(parseInt(input.name.substring(1)))) {
+                    personalAchievement += value;
+                }
+            });
+
+            // Определяем результат
+            let result = '';
+            let maxScore = Math.max(emotionalExhaustion, depersonalization, personalAchievement);
+            if (maxScore === emotionalExhaustion) {
+                result = 'Эмоциональное истощение';
+            } else if (maxScore === depersonalization) {
+                result = 'Деперсонализация';
+            } else if (maxScore === personalAchievement) {
+                result = 'Редукция личных достижений';
+            }
+
+            // Выводим результат
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<h2>Результат:</h2><p>${result}</p>`;
+
+            // Выводим дополнительный текст в зависимости от результата
+            let additionalText = '';
+            if (result === 'Эмоциональное истощение') {
+                additionalText = 'Эмоциональное истощение проявляется в снижении эмоционального тонуса, повышенной психической истощаемости и аффективной лабильности, равнодушием, неспособностью испытывать сильные эмоции, как положительные, так и отрицательные, утраты интереса и позитивных чувств к окружающим, ощущении «пресыщенности» работой, неудовлетворенностью жизнью в целом.';
+            } else if (result === 'Деперсонализация') {
+                additionalText = 'Деперсонализация проявляется в отчуждении и эмоциональной отстраненности по отношению к себе и окружающим, утрате идентичности, чувстве отсутствия контроля над своими действиями и событиями, а также ощущении нереальности окружающего мира.';
+            } else if (result === 'Редукция личных достижений') {
+                additionalText = 'Редукция личных достижений проявляется в сомнениях в своих способностях и компетенциях, оценке себя как неудачника, утрате смысла жизни и низкой самооценке, а также в чувстве беспомощности и бесполезности.';
+            }
+            resultDiv.innerHTML += `<p>${additionalText}</p>`;
+        });
+    </script>
+</body>
+</html>
